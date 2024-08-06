@@ -1,0 +1,12 @@
+<h1>Add Task</h1>
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+  <%= f.submit "Add task"%>
+<% end %>
+
+<%= link_to "Go back", tasks_path %>
